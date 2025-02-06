@@ -1,0 +1,26 @@
+
+/* Importamos la fuente "Poppins" desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.03)), /* Degradado muy suave con opacidad mínima */
+    url('../assets/buena.png'); /* Ruta de tu imagen */
+  background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+  background-position: 0px 80%; /* Ajusta la posición de la imagen */
+  background-attachment: fixed; /* Mantiene la imagen fija mientras se hace scroll */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  color: white; /* Color de texto por defecto */
+}
+
+  
+
+
+body {
+  font-family: 'Poppins', sans-serif; /* Fuente "Poppins" */
+  line-height: 1.6;
+  background-color: #f4f4f4; /* Fondo claro */
+}
