@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Header.css"; // Ruta corregida para el archivo CSS
-import logoImage from "../assets/logo.png"; // Importación del logo
+import logoImage from "../assets/logocopia.png"; // Importación del logo
 import { MdMenu } from "react-icons/md"; // Importa el icono de menú
 
 const Header = () => {
