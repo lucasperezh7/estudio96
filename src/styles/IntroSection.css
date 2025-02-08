@@ -143,6 +143,163 @@
   }
 }
 
+@media (min-width: 2560px) {
+  /* Sección de Introducción */
+  .intro-section {
+    height: 80vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.05); /* Fondo ligeramente oscuro */
+  }
+
+  /* Contenedor principal */
+  .intro-container {
+    padding: 60px; /* Aumenta el padding para dar más espacio entre los elementos */
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos al principio y final */
+    align-items: center; /* Centra los elementos verticalmente */
+    width: 100%;
+    position: relative;
+  }
+
+  /* Bio */
+  .bio {
+    width: 650px; /* Aumenta el ancho de la bio */
+    padding-left: 60px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInSlideUp 1.5s ease-out forwards;
+    margin-left: 50px; /* Agrega margen izquierdo */
+  }
+
+  .bio h2 {
+    font-size: 60px; /* Aumenta el tamaño del título */
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .bio h2::after {
+    content: "";
+    display: block;
+    width: 500px;
+    height: 4px;
+    background-color: #ffcc00;
+    margin-top: 8px;
+    border-radius: 2px;
+  }
+
+  .bio p {
+    font-size: 32px; /* Aumenta el tamaño del texto */
+    line-height: 1.8;
+    color: #ddd;
+    font-weight: bold; /* Hace el texto más grueso */
+  }
+
+  /* Links Sociales */
+  .social-links {
+    padding-top: 0px;
+    padding-right: 150px; /* Mayor espaciado a la derecha */
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInSlideUp 1.5s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0px; /* Agrega margen izquierdo */
+  }
+
+  .social-links h2 {
+    font-size: 60px; /* Aumenta el tamaño del título */
+    margin-bottom: 20px;
+    color: #ffffff;
+    letter-spacing: 2px;
+  }
+
+  .social-links h2::after {
+    content: "";
+    display: block;
+    width: 320px;
+    height: 4px;
+    background-color: #ffcc00;
+    margin-top: 8px;
+    border-radius: 2px;
+  }
+
+  .social-links ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .social-links li {
+    display: inline-block;
+  }
+
+  .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 32px; /* Aumenta el tamaño de los enlaces */
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .social-links a:hover {
+    color: #ffcc00;
+    transform: translateY(-8px) scale(1.2); /* Efecto de hover más marcado */
+  }
+
+  .social-links a i {
+    margin-right: 15px;
+  }
+
+  /* Animación de aparición para bio y social links */
+  @keyframes fadeInSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animaciones adicionales para deslizamiento */
+  @keyframes slideInFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+
+
+
 
 @media (min-width: 1024px) and (max-width: 1024px) {
   .intro-section {

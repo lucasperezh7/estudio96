@@ -26,6 +26,37 @@ body {
   padding-right: 60px;
 }
 
+/* Estilos para pantallas 4K */
+/* Estilos para pantallas 4K */
+@media (min-width: 2560px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 20px;
+    height: 12%; /* Mantén el 12% de la altura */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    z-index: 100;
+  }
+
+  /* Ajuste de espaciado para evitar superposiciones con el header */
+  body {
+    padding-top: 90px; /* Ajusta el espacio para un header más alto en pantallas grandes */
+  }
+
+  /* Estilos para el logo */
+  .logo img {
+    width: 250px; /* Tamaño moderado del logo para pantallas 4K */
+    height: auto;
+    padding-top: 15px;
+    padding-right: 60px; /* Mantén un espaciado cómodo al lado derecho */
+  }
+}
+
+
 
 /* Responsivo: mostrar el ícono del menú en dispositivos pequeños */
 @media (max-width: 768px) {
