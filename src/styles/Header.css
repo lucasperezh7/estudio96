@@ -113,35 +113,51 @@ body {
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
+  /* Elimina cualquier desbordamiento global */
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+    margin: 0;
+    padding: 0;
+  }
+
   .header {
     display: flex;
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center; /* Centra el contenido verticalmente */
-    width: 100%; /* Hace que el header ocupe todo el ancho de la pantalla */
+    width: 100vw; /* Asegura que ocupa exactamente el ancho de la pantalla */
     height: 80px; /* Altura ajustada para pantallas de tablets y móviles */
     background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
     z-index: 100; /* Asegura que el header esté por encima de otros elementos */
     padding-top: 25px; /* Ajuste de espaciado superior */
+    position: relative; /* Evita que se fije en la pantalla */
   }
 
   /* Asegura que el logo esté centrado */
   .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Asegura que el contenedor del logo ocupe todo el ancho */
+    position: relative; /* Elimina absolute para evitar desbordamientos */
+    margin: 0; /* Elimina margen lateral extra */
+    margin-left: 50px;
+    transform: none;
   }
 
   .logo img {
     width: 140px; /* Ajusta el tamaño del logo */
     height: auto;
+    max-width: 100%; /* Evita que la imagen se desborde */
   }
 
-  /* Espaciado para que el contenido no se oculte detrás del header */
+  /* Asegura que el contenido no se oculte detrás del header */
   body {
     padding-top: 90px; /* Ajuste de espacio para evitar que el contenido quede tapado */
   }
 }
+
 
 
 
