@@ -140,7 +140,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 321px) and (max-width: 767px) {
   .video-section {
     padding: 40px 20px; /* Mayor padding para dispositivos móviles y tablets */
     text-align: center;
