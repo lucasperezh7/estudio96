@@ -146,31 +146,43 @@ body {
 
 
 @media (max-width: 320px) {
+  /* Elimina cualquier desbordamiento global */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
   .header {
     display: flex;
     justify-content: center; 
     align-items: center; 
     padding-top: 70px;
-    width: 100%;
+    width: 100vw; /* Asegura que ocupa todo el ancho */
     height: 12%;
+    position: relative; /* Asegura que no se quede fijo */
   }
 
   /* Asegura que el logo esté centrado */
   .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); /* Centra el logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ocupa todo el ancho para centrar contenido */
   }
 
   .logo img {
     width: 120px; /* Tamaño más compacto para pantallas pequeñas */
     height: auto;
-    padding: 0; /* Eliminamos padding innecesario */
+    padding: 0;
+    max-width: 100%;
   }
 
   /* Espaciado para que el contenido no se oculte detrás del header */
   body {
-    padding-top: 60px; /* Ajusta el espacio para el header */
+    padding-top: 0; /* Elimina el espacio extra */
   }
 }
+
 
