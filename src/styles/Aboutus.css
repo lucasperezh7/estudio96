@@ -1,0 +1,125 @@
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: px 20px;
+  padding-top: 120px;
+}
+
+/* Estilos para el título principal */
+.about-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+/* Línea decorativa debajo del título */
+.about-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #f39c12;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  gap: 0px;
+}
+
+/* Mantiene la imagen a la izquierda */
+.left-image {
+  flex-direction: row;
+  padding-left: 320px;
+}
+
+/* Mantiene la imagen completamente a la derecha */
+.right-image {
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 340px;
+}
+
+/* Contenedor para h2 y p */
+.h2p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  text-align: left;
+}
+
+.right-text {
+  padding-right: 250px;
+}
+
+.text-left {
+  align-items: flex-start;
+  padding-left: 320px;
+  width: 43%;
+}
+
+/* Contenedor para alinear la imagen a la derecha */
+.image-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about-text {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 340px; /* Ajusta el ancho a lo que necesites */
+  height: auto; /* Mantiene la proporción original */
+  object-fit: cover; /* Mantiene la imagen proporcional dentro del contenedor */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 80%;
+  }
+
+  .h2p {
+    width: 90%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .image-container {
+    width: 100%;
+    justify-content: center;
+  }
+}

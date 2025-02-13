@@ -1,235 +1,201 @@
-/* Estilos para el header */
+/* HEADER INICIAL (TRANSPARENTE) */
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0); /* Inicialmente transparente */
+  z-index: 1000;
+  transition: background-color 1.0s ease, padding 1.8s ease; /* Transición más lenta */
+  padding: 20px 0; /* Espaciado inicial */
+  height: 120px; /* Altura inicial del header */
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Mantener la disposición de los elementos */
+  align-items: center; /* Centrado en el eje Y */
+}
+
+/* HEADER AL HACER SCROLL (COMPACTO Y SUAVE) */
+.header.sticky {
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo suave con poca transparencia */
+  padding: 10px 0; /* Reducir padding */
+  height: 90px; /* Altura más pequeña */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background-color 1.9s ease, padding 2.6s ease, height 1.6s ease; /* Transición más suave */
+}
+
+/* CONTENEDOR DEL HEADER */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Mantener los elementos distribuidos a la izquierda y derecha */
+  align-items: center; /* Centrado en el eje Y */
+  max-width: 1200px;
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  padding: 0 2rem;
+  gap: 2rem; /* Espacio entre logo y menú */
+}
+
+/* LOGO */
+.logo {
+  display: flex;
   align-items: center;
-  color: white;
-  padding-top: 20px;
-  height: 12%; /* Ocupa el 10% de la pantalla */
-  top: 0; /* Se posiciona en la parte superior de la pantalla */
-  left: 0; /* Alinea el header con el borde izquierdo */
-  width: 100%; /* Hace que el header ocupe todo el ancho de la pantalla */
-  z-index: 100; /* Asegura que se quede encima de otros elementos */
+  cursor: pointer; /* Cambia el cursor a "seleccionar" cuando pase el ratón */
+}
+
+.logo-image {
+  width: 120px; /* Tamaño normal */
+  transition: width 0.6s ease, opacity 0.6s ease; /* Transición más lenta */
+  cursor: pointer; /* Cambia el cursor a "seleccionar" cuando pase el ratón */
+}
+
+/* Cuando el header se vuelve sticky, el logo se encoge sutilmente */
+.header.sticky .logo-image {
+  width: 100px; /* Reducción suave de tamaño */
+  opacity: 0.85;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 3rem; /* Espacio entre los enlaces */
+}
+
+.navbar li {
+  font-size: 1.0rem; /* Un poco más grande */
+  position: relative;
+  cursor: pointer; /* Cambia el cursor a "seleccionar" */
+}
+
+/* Enlaces del menú con un cambio de opacidad suave */
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem;
+  transition: opacity 0.6s ease; /* Transición suave */
+}
+
+/* Al hacer scroll, los enlaces del menú cambian suavemente su opacidad */
+.header.sticky .navbar a {
+  opacity: 0.8;
+}
+
+/* LÍNEA ANIMADA BAJO LOS LINKS */
+.navbar li::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #666;
+  transition: width 0.6s ease, left 0.6s ease; /* Transición más lenta */
+}
+
+.navbar li:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* BOTÓN DE CONTACTO */
+.cta-but {
+  display: inline-block;
+  padding: 0.5rem 1rem;
   
+  background-color: #444;
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer; /* Cambia el cursor a "seleccionar" */
+  margin-right: 40px; /* Añadir margen a la derecha */
 }
 
-/* Espaciado para que el contenido no se superponga al header */
-body {
-  padding-top: 70px; /* Agrega un espaciado en la parte superior para que el contenido no se oculte detrás del header */
+.cta-but:hover {
+  background-color: #222;
+  transform: translateY(-2px);
 }
-
-/* Estilos para el logo */
-.logo img {
-  width: 150px;
-  height: auto;
-  padding-top: 15px; 
-  padding-right: 60px;
-}
-
-/* Estilos para pantallas 4K */
-/* Estilos para pantallas 4K */
-@media (min-width: 2560px) {
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding-top: 20px;
-    height: 12%; /* Mantén el 12% de la altura */
-    top: 0;
-    left: 0;
-    width: 100%; /* Asegura que el header ocupe todo el ancho */
-    z-index: 100;
-  }
-
-  /* Ajuste de espaciado para evitar superposiciones con el header */
-  body {
-    padding-top: 90px; /* Ajusta el espacio para un header más alto en pantallas grandes */
-  }
-
-  /* Estilos para el logo */
-  .logo img {
-    width: 250px; /* Tamaño moderado del logo para pantallas 4K */
-    height: auto;
-    padding-top: 15px;
-    padding-right: 60px; /* Mantén un espaciado cómodo al lado derecho */
-  }
-}
-
-
-
-/* Responsivo: mostrar el ícono del menú en dispositivos pequeños */
-@media (max-width: 768px) {
-  .menuIcon {
-    display: block;
-  }
-
-  .menu {
-    width: 200px;
-  }
-}
-
-/* Ocultar el menú en dispositivos grandes */
-@media (min-width: 769px) {
-  .menu {
-    display: none;
-  }
-}
-
-
-@media (width: 1024px) {
-  .header {
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    width: 100%; /* Hace que el header ocupe todo el ancho de la pantalla */
-    height: 80px; /* Altura ajustada para portátiles */
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
-    z-index: 100; /* Asegura que el header esté por encima de otros elementos */
-    padding-top: 15px; /* Ajuste de espaciado superior */
-  }
-
-  /* Asegura que el logo esté centrado */
-  .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); /* Centra el logo */
-    margin-left: 40px; /* Ajuste para la posición del logo */
-  }
-
-  .logo img {
-    width: 140px; /* Tamaño adecuado para portátiles */
-    height: auto;
-  }
-
-  /* Espaciado para que el contenido no se oculte detrás del header */
-  body {
-    padding-top: 90px; /* Ajuste de espacio para evitar que el contenido quede tapado */
-  }
-}
-
-
-
-@media (width: 768px) {
-  .header {
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    
-    left: 0; /* Alinea el header con el borde izquierdo */
-    width: 100%; /* Hace que el header ocupe todo el ancho de la pantalla */
-    height: 80px; /* Altura ajustada para tablets */
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
-    z-index: 100; /* Asegura que el header esté por encima de otros elementos */
-    padding-top: 15px; /* Ajuste de espaciado superior */
-  }
-
-  /* Asegura que el logo esté centrado */
-  .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: 28px;
-  }
-
-  .logo img {
-    width: 140px; /* Ajusta el tamaño del logo */
-    height: auto;
-  }
-
-  /* Espaciado para que el contenido no se oculte detrás del header */
-  body {
-    padding-top: 90px; /* Ajuste de espacio para evitar que el contenido quede tapado */
-  }
-}
-
-@media (min-width: 321px) and (max-width: 767px) {
-  /* Elimina cualquier desbordamiento global */
-  html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden; /* Evita el scroll horizontal */
-    margin: 0;
-    padding: 0;
-  }
-
-  .header {
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    width: 100vw; /* Asegura que ocupa exactamente el ancho de la pantalla */
-    height: 80px; /* Altura ajustada para pantallas de tablets y móviles */
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
-    z-index: 100; /* Asegura que el header esté por encima de otros elementos */
-    padding-top: 25px; /* Ajuste de espaciado superior */
-    position: relative; /* Evita que se fije en la pantalla */
-  }
-
-  /* Asegura que el logo esté centrado */
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* Asegura que el contenedor del logo ocupe todo el ancho */
-    position: relative; /* Elimina absolute para evitar desbordamientos */
-    margin: 0; /* Elimina margen lateral extra */
-    margin-left: 50px;
-    transform: none;
-  }
-
-  .logo img {
-    width: 140px; /* Ajusta el tamaño del logo */
-    height: auto;
-    max-width: 100%; /* Evita que la imagen se desborde */
-  }
-
-  /* Asegura que el contenido no se oculte detrás del header */
-  body {
-    padding-top: 90px; /* Ajuste de espacio para evitar que el contenido quede tapado */
-  }
-}
-
-
-
 
 @media (max-width: 320px) {
-  /* Elimina cualquier desbordamiento global */
-  html, body {
-    width: 100%;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-  }
-
   .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Inicialmente transparente */
+    z-index: 1000;
+    transition: background-color 1.5s ease-in-out, padding 1.8s ease-in-out, height 1.8s ease-in-out; 
+    padding: 0px 0;
+    padding-top: 20px;
+    height: 100px;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    padding-top: 70px;
-    width: 100vw; /* Asegura que ocupa todo el ancho */
-    height: 12%;
-    position: relative; /* Asegura que no se quede fijo */
+    justify-content: center; /* Centrar elementos */
+    align-items: center;
   }
 
-  /* Asegura que el logo esté centrado */
+  .header-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+    background-color: aliceblue;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    transition: padding 1.8s ease-in-out; /* Suaviza los cambios de padding */
+  }
+
+  .header.sticky {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px 0; /* Transición de padding más fluida */
+    height: 80px; /* Reducir la altura, pero de forma progresiva */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Sombra más suave y elegante */
+    transition: background-color 1.5s ease-in-out, padding 1.8s ease-in-out, height 1.8s ease-in-out;
+  }
+
+  /* LOGO */
   .logo {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%; /* Ocupa todo el ancho para centrar contenido */
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+   margin-bottom: -20px;
   }
 
-  .logo img {
-    width: 120px; /* Tamaño más compacto para pantallas pequeñas */
-    height: auto;
+  .logo-image {
+    width: 120px;
+    transition: width 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  }
+
+  .header.sticky .logo-image {
+    width: 80px; /* Reducción más progresiva */
+    opacity: 0.9;
+    transform: scale(0.9); /* Suaviza la reducción */
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
     padding: 0;
-    max-width: 100%;
+    gap: 1px; /* Espacio entre los enlaces */
   }
 
-  /* Espaciado para que el contenido no se oculte detrás del header */
-  body {
-    padding-top: 0; /* Elimina el espacio extra */
-  }
 }
+
+  /* HEADER */
+
 
 

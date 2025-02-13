@@ -1,0 +1,144 @@
+/* Portfolio.css */
+
+/* Estilos generales para el contenedor principal */
+.portfolio-carrusel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:  20px;
+  padding-top: 120px;
+  text-align: center;
+}
+
+.portfolio-carrusel-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0px;
+  color: #333;
+}
+
+.portfolio-carrusel-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #f39c12;
+  margin: 10px auto 0;
+  border-radius: 2px;
+  
+}
+/* Contenedor del carrusel */
+.portfolio-carrusel-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Contenedor de las imágenes */
+.portfolio-carrusel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  transition: transform 1s ease-in-out; /* Transición suave */
+  margin-top: -16px;
+}
+
+/* Estilo común para las imágenes */
+.portfolio-carrusel-image {
+  position: absolute;
+  height: auto;
+  object-fit: cover;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Suavizar la transición */
+}
+
+/* Imagen principal (la actual) */
+.main-image {
+  z-index: 3;
+  width: 50%; /* Imagen principal más pequeña */
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Transición suave */
+}
+
+/* Imagen anterior (a la derecha de la imagen principal) */
+.left {
+  left: 0%; /* Se mantiene visible a la izquierda */
+  opacity: 0.6;
+  width: 40%; /* Imagen lateral más pequeña */
+  transform: scale(0.8); /* Efecto de escala */
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Imagen siguiente (a la derecha de la imagen principal) */
+.right {
+  right: 0%; /* Se mantiene visible a la derecha */
+  opacity: 0.6;
+  width: 40%; /* Imagen lateral más pequeña */
+  transform: scale(0.8); /* Efecto de escala */
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Animación de entrada para la imagen anterior (se fusiona con la principal) */
+.portfolio-carrusel-image.left.entering {
+  left: 10%; /* Se mueve hacia el centro, fusionándose con la principal */
+  opacity: 1;
+  transform: scale(1); /* Se agranda */
+}
+
+/* Animación de entrada para la imagen siguiente (se fusiona con la principal) */
+.portfolio-carrusel-image.right.entering {
+  right: 10%; /* Se mueve hacia el centro, fusionándose con la principal */
+  opacity: 1;
+  transform: scale(1); /* Se agranda */
+}
+
+/* Animación de salida para la imagen anterior (se mueve a la derecha) */
+.portfolio-carrusel-image.left.exiting {
+  left: 100%; /* Se desplaza fuera de la vista hacia la derecha */
+  opacity: 0;
+  transform: scale(0.8); /* Se reduce el tamaño */
+}
+
+/* Animación de salida para la imagen siguiente (se mueve a la izquierda) */
+.portfolio-carrusel-image.right.exiting {
+  right: 100%; /* Se desplaza fuera de la vista hacia la izquierda */
+  opacity: 0;
+  transform: scale(0.8); /* Se reduce el tamaño */
+}
+
+/* Efecto de transición suave */
+.portfolio-carrusel-image.left,
+.portfolio-carrusel-image.right {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Efecto de deslizamiento de la imagen principal de derecha a izquierda */
+.portfolio-carrusel-wrapper.move-right {
+  transform: translateX(-100%); /* Desplazamiento de toda la vista hacia la izquierda */
+}
+
+/* Estilos de las imágenes para el flujo del carrusel */
+.portfolio-carrusel-image {
+  position: absolute;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Animación cuando las imágenes se deslizan desde los lados */
+.portfolio-carrusel-image.left.entering {
+  transform: translateX(0); /* La imagen anterior se mueve hacia el centro */
+}
+
+.portfolio-carrusel-image.right.entering {
+  transform: translateX(0); /* La imagen siguiente se mueve hacia el centro */
+}
+
+.portfolio-carrusel-image.left.exiting {
+  transform: translateX(100%); /* Se mueve hacia la derecha */
+}
+
+.portfolio-carrusel-image.right.exiting {
+  transform: translateX(-100%); /* Se mueve hacia la izquierda */
+}

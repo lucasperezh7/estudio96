@@ -1,0 +1,111 @@
+/* Estilos generales para la sección de contacto */
+.contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f9;
+  height: 100vh;
+  padding: 20px;
+  padding-top: 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Título de la sección Contacto */
+.contacto-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #222;
+  text-align: center;
+}
+
+.contacto-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #f39c12;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Contenedor de la cuadrícula */
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  width: 90%;
+  max-width: 1200px;
+  height: 60%;
+  overflow: hidden;
+}
+
+/* Estilo común para cada bloque de información */
+.contact-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Efecto al hacer hover */
+.contact-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos (iconos) de cada bloque */
+.contact-info svg {
+  margin-bottom: 10px;
+}
+
+/* Detalles de contacto */
+.contact-detail {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Números de teléfono */
+.contact-detail p {
+  margin: 5px 0; /* Reduce el espacio entre los números */
+}
+
+.contact-detail a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.contact-detail a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .info-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .contact-info {
+    padding: 15px;
+  }
+
+  .contact-title {
+    font-size: 1.2rem;
+  }
+
+  .contact-detail {
+    font-size: 0.9rem;
+  }
+}

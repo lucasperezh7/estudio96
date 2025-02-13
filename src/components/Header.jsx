@@ -1,38 +1,79 @@
-import React, { useState } from "react";
-import "../styles/Header.css"; // Ruta corregida para el archivo CSS
-import logoImage from "../assets/logocopia.png"; // Importación del logo
-import { MdMenu } from "react-icons/md"; // Importa el icono de menú
+import React, { useState, useEffect } from "react";
+import { Link as ScrollLink } from "react-scroll"; // Para enlaces internos
+import logoImage from "../assets/logo.webp";
+import "../styles/Header.css";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="header">
-      <div className="logo">
-        <img src={logoImage} alt="Logo del artista" />
-      </div>
-      {menuOpen && (
-        <nav className="menu">
+    <header className={`header ${isSticky ? "sticky" : ""}`}>
+      <div className="header-container">
+        <div className="logo">
+          <ScrollLink to="intro" smooth={true} duration={500}>
+            <img
+              src={logoImage}
+              alt="Logo Saya Consulting"
+              className="logo-image"
+            />
+          </ScrollLink>
+        </div>
+
+        <nav className={`navbar ${isMenuOpen ? "open" : ""}`}>
           <ul>
             <li>
-              <a href="#inicio">Inicio</a>
+              <ScrollLink to="intro" smooth={true} duration={1500}>
+                Inicio
+              </ScrollLink>
             </li>
             <li>
-              <a href="#musica">Música</a>
+              <ScrollLink to="Aboutus" smooth={true} duration={1500}>
+                Sobre nosotros
+              </ScrollLink>
             </li>
             <li>
-              <a href="#videos">Videos</a>
+              <ScrollLink to="Services" smooth={true} duration={1500}>
+                Ofrecemos
+              </ScrollLink>
             </li>
             <li>
-              <a href="#contacto">Contacto</a>
+              <ScrollLink to="Portfolio" smooth={true} duration={1500}>
+                Nuestros proyectos
+              </ScrollLink>
             </li>
           </ul>
         </nav>
-      )}
+        <div className="cta">
+          <ScrollLink
+            to="Contact"
+            smooth={true}
+            duration={1500}
+            className="cta-but"
+          >
+            Contacto
+          </ScrollLink>
+        </div>
+      </div>
     </header>
   );
 };

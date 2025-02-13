@@ -1,0 +1,99 @@
+.portfolio {
+  text-align: center;
+  padding: 0px 20px;
+  padding-top: 120px;
+}
+
+.portfolio-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+.portfolio-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #f39c12;
+  margin: 10px auto 0;
+  border-radius: 2px;
+  
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grid adaptable con 3 imágenes arriba y 2 centradas abajo */
+.portfolio-1column {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-item {
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  flex: 1 1 calc(33.33% - 20px); /* Tres columnas en la primera fila */
+  margin-bottom: 20px;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+
+}
+
+.portfolio-info {
+  padding: 15px;
+}
+
+.portfolio-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.portfolio-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Centramos las dos últimas imágenes en la segunda fila */
+.portfolio-2column {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .portfolio-1column {
+    display: block; /* Una columna para dispositivos móviles */
+  }
+
+  .portfolio-item {
+    flex: 1 1 100%; /* Las imágenes ocupan todo el ancho disponible en pantallas pequeñas */
+    margin: 10px 0; /* Espaciado entre las imágenes */
+  }
+
+  .portfolio-image {
+    height: 150px; /* Ajustamos la altura de las imágenes para pantallas pequeñas */
+  }
+}

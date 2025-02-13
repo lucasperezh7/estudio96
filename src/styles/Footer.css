@@ -1,86 +1,36 @@
-/* Footer.css */
-
 /* Estilos para el footer */
 .footer {
-  background-color: rgba(15, 15, 15, 1); /* Negro con 80% de opacidad */
-  color: white; /* Texto blanco */
-  text-align: center; /* Centra el texto */
-  padding-top: 26px;
-  padding-bottom: 16px;
-  position: relative;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  
   bottom: 0;
   width: 100%;
-  margin-top: 50px; /* Espacio superior */
+  box-sizing: border-box;
+  font-size: 0.9rem;
 }
 
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-/* Estilo para el texto del footer */
-.footer-text p {
+.footer-text {
   margin: 0;
-  font-size: 16px;
 }
 
-/* Estilos para los iconos de las redes sociales */
-.social-icons {
+.footer-contact {
   margin-top: 10px;
 }
 
-.social-icon {
-  margin: 0 10px;
-  font-size: 34px;
-  color: white;
+.footer-link {
+  color: #f39c12;
   text-decoration: none;
-  transition: color 0.3s;
 }
 
-.social-icon:hover {
-  color: #ffcc00; /* Cambia el color de los iconos al pasar el ratón */
-}
-
-@media (min-width: 2560px) {
-  /* Footer */
-  .footer {
-    background-color: rgba(15, 15, 15, 1); /* Fondo negro */
-    color: white; /* Texto blanco */
-    text-align: center; /* Centra el texto */
-    padding-top: 40px; /* Aumenta el padding superior */
-    padding-bottom: 30px; /* Aumenta el padding inferior */
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 50px; /* Espacio superior */
-  }
-
-  /* Estilo para el texto del footer */
-  .footer-text p {
-    margin: 0;
-    font-size: 24px; /* Aumenta el tamaño de fuente */
-    line-height: 1.5; /* Mejora la legibilidad */
-  }
-
-  /* Estilos para los iconos de las redes sociales */
-  .social-icons {
-    margin-top: 20px; /* Aumenta el margen superior */
-  }
-
-  .social-icon {
-    margin: 0 33px; /* Aumenta el espacio entre los iconos */
-    font-size: 60px; /* Aumenta el tamaño de los iconos */
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s, transform 0.3s; /* Añade un efecto de transformación */
-  }
-
-  .social-icon:hover {
-    color: #ffcc00; /* Cambia el color de los iconos al pasar el ratón */
-    transform: scale(1.2); /* Añade un efecto de aumento al pasar el ratón */
-  }
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-  .social-icon {
-    font-size: 20px;
-    margin: 0 8px;
-  }
+.footer-link:hover {
+  text-decoration: underline;
 }
