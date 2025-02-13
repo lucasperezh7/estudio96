@@ -1,5 +1,5 @@
 import "../styles/IntroSection.css";
-import backgroundVideo from "../assets/introsection.mp4"; // Correcta importación
+import backgroundVideo from "../assets/Introsection.mp4"; // Correcta importación
 
 export default function IntroSection() {
   return (
