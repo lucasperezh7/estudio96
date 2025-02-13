@@ -5,7 +5,7 @@ import Introsection from "../components/IntroSection";
 import AboutUs from "../components/Aboutus";
 import Services from "../components/Services";
 import Portfolio from "../components/Portfolio";
-import Contacto from "../components/contact";
+import Contacto from "../components/Contact";
 import Footer from "../components/Footer";
 function Home() {
   return (
