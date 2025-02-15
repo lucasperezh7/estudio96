@@ -133,7 +133,6 @@
     z-index: 1000;
     transition: background-color 1.5s ease-in-out, padding 1.8s ease-in-out, height 1.8s ease-in-out; 
     padding: 0px 0;
-    padding-top: 20px;
     height: 100px;
     display: flex;
     justify-content: center; /* Centrar elementos */
@@ -146,8 +145,8 @@
     flex-direction: column;
     gap: 0px;
     background-color: aliceblue;
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 8px;
     transition: padding 1.8s ease-in-out; /* Suaviza los cambios de padding */
   }
 
@@ -171,11 +170,11 @@
 
   .logo-image {
     width: 120px;
-    transition: width 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    transition: width 1.8s ease-in-out, opacity 0.8s ease-in-out;
   }
 
   .header.sticky .logo-image {
-    width: 80px; /* Reducción más progresiva */
+    width: 120px; /* Reducción más progresiva */
     opacity: 0.9;
     transform: scale(0.9); /* Suaviza la reducción */
   }
@@ -183,6 +182,7 @@
     display: flex;
     align-items: center;
     margin-left: 0px;
+    display: none;
   }
   
   .navbar ul {
@@ -192,7 +192,9 @@
     padding: 0;
     gap: 1px; /* Espacio entre los enlaces */
   }
-
+.cta-but {
+  display: none;
+}
 }
 
   /* HEADER */

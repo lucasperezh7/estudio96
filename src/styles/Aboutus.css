@@ -123,3 +123,60 @@ h2 {
     justify-content: center;
   }
 }
+
+@media (max-width: 320px) {
+  .about-us {
+    padding: 50px 10px; /* Reduce el padding */
+    gap: 30px; /* Menos espacio entre elementos */
+  }
+
+  .about-title {
+    font-size: 24px; /* Reduce el tamaño del título */
+    letter-spacing: 1px;
+  }
+
+  .about-title::after {
+    width: 60px; /* Reduce la línea decorativa */
+    height: 3px;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .left-image,
+  .right-image,
+  .text-left,
+  .right-text {
+    padding: 0; /* Elimina los padding laterales */
+    width: 100%; /* Aprovecha todo el ancho */
+    text-align: center;
+  }
+
+  .h2p {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .about-image {
+    width: 90%; /* Ajusta la imagen para móviles pequeños */
+    max-width: 250px;
+  }
+
+  .image-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .about-text {
+    font-size: 16px;
+    text-align: center;
+  }
+}
