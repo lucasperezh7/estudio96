@@ -147,26 +147,35 @@
   .portfolio-carrusel {
     padding-top: 80px; /* Reduce el espacio superior */
     padding: 10px; /* Menos padding lateral */
+    margin: 0 auto; /* Centrado horizontal */
+    width: 100%; /* Asegura que ocupe todo el ancho */
   }
 
   .portfolio-carrusel-title {
     padding-top: 30px;
     font-size: 1.5rem; /* Reduce el tamaño del título */
     margin-bottom: 20px;
+    text-align: center; /* Asegura que el título esté centrado */
   }
 
   .portfolio-carrusel-title::after {
     width: 50px; /* Reduce la línea decorativa */
     height: 3px;
+    margin: 10px auto 0; /* Centra la línea decorativa */
   }
 
   .portfolio-carrusel-container {
     height: 250px; /* Reduce la altura del carrusel */
+    display: flex;
+    justify-content: center; /* Centra las imágenes */
+    align-items: center;
+    width: 100%; /* Asegura que ocupe todo el ancho */
   }
 
   .portfolio-carrusel-image {
     width: 80%; /* Hace que las imágenes sean más pequeñas */
     height: auto;
+    margin: 0 auto; /* Centra las imágenes */
   }
 
   .main-image {
