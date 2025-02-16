@@ -262,4 +262,100 @@
   }
 }
 
+@media screen and (min-width: 2560px) {
+  /* Estilos generales para la sección de contacto */
+  .contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+    padding: 0px;
+    padding-top: 80px; /* Aumentamos padding superior */
+    padding-bottom: 120px; /* Aumentamos padding inferior */
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  /* Título de la sección Contacto */
+  .contacto-title {
+    font-size: 3.2rem; /* Aumentamos tamaño del título */
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #222;
+    text-align: center;
+  }
+
+  .contacto-title::after {
+    content: "";
+    display: block;
+    width: 120px; /* Aumentamos el tamaño de la línea */
+    height: 5px;
+    background-color: #88bcf0;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+
+  /* Contenedor de la cuadrícula */
+  .info-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px; /* Aumentamos el espacio entre los bloques */
+    width: 90%;
+    max-width: 1800px; /* Aumentamos el máximo del contenedor */
+    height: 60%;
+    overflow: hidden;
+  }
+
+  /* Estilo común para cada bloque de información */
+  .contact-info {
+    background-color: #fff;
+    padding: 30px; /* Aumentamos padding para dar más espacio */
+    border-radius: 12px; /* Borde más redondeado */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más notoria */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+
+  /* Efecto al hacer hover */
+  .contact-info:hover {
+    transform: translateY(-8px); /* Más elevación al hacer hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra más grande */
+  }
+
+  /* Títulos (iconos) de cada bloque */
+  .contact-info svg {
+    margin-bottom: 15px; /* Aumentamos el espacio entre el ícono y el texto */
+    width: 50px; /* Aumentamos el tamaño del ícono */
+    height: 50px; /* Aumentamos el tamaño del ícono */
+  }
+
+  /* Detalles de contacto */
+  .contact-detail {
+    font-size: 1.2rem; /* Aumentamos tamaño de texto */
+    color: #555;
+    margin-top: 15px;
+  }
+
+  /* Números de teléfono */
+  .contact-detail p {
+    margin: 8px 0; /* Aumentamos el espacio entre los números */
+  }
+
+  .contact-detail a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold; /* Resaltamos los enlaces */
+  }
+
+  .contact-detail a:hover {
+    text-decoration: underline;
+  }
+}
 

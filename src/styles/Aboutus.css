@@ -429,5 +429,61 @@ h2 {
   }
 }
 
+@media screen and (min-width: 2560px) {
+  .about-us {
+    gap: 120px; /* Mayor separación entre elementos */
+    padding: 160px 40px; /* Más padding para mayor espacio */
+    max-width: 1900px; /* Asegurar que no se vea demasiado estrecho */
+    margin: 0 auto; /* Centrar en la pantalla */
+  }
+
+  .about-title {
+    font-size: 42px; /* Aumentar tamaño del título */
+    letter-spacing: 3px; /* Mayor separación entre letras */
+  }
+
+  .about-title::after {
+    width: 100px; /* Línea decorativa más ancha */
+    height: 5px; /* Un poco más gruesa */
+  }
+
+  .about-section {
+    max-width: 1600px; /* Aumentar el ancho */
+    gap: 100px; /* Separar más la imagen del texto */
+    justify-content: center; /* Centrar todo */
+  }
+
+  
+  .h2p {
+    width: 50%; /* Ampliar la sección de texto */
+  }
+
+  .text-left {
+    padding-left: 0; /* Eliminar padding innecesario */
+    width: 50%; /* Ajustar ancho */
+  }
+
+  .right-text {
+    padding-right: 0; /* Centrar el texto */
+  }
+
+  .about-text {
+    font-size: 22px; /* Texto más grande */
+    line-height: 1.8; /* Espaciado mayor para mejor lectura */
+  }
+
+  .about-image {
+    max-width: 450px; /* Aumentar el tamaño de la imagen */
+    width: 100%;
+    border-radius: 15px; /* Bordes más redondeados */
+  }
+
+  .left-image,
+  .right-image {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center; /* Centrar imágenes */
+  }
+}
 
 

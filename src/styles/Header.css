@@ -238,6 +238,7 @@
 }
 
 
+
 @media (max-width: 768px) and (min-width: 480px) {
   .header {
     position: fixed;
@@ -362,6 +363,7 @@
   }
 }
 
+
 @media (max-width: 1024px) and (min-width: 768px) {
   .header {
     position: fixed;
@@ -480,6 +482,44 @@
   .cta-but:hover {
     background-color: #222;
     transform: translateY(-2px);
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .header {
+    padding: 40px 0; /* Aumentar padding para mayor presencia */
+    height: 160px; /* Aumentar la altura del header */
+    display: flex;
+    justify-content: center; /* Centrar el contenido en el eje X */
+  }
+
+  .header-container {
+    max-width: 1800px; /* Ampliar el contenedor para pantallas grandes */
+    width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+    padding: 0 4rem; /* Aumentar el padding lateral */
+    gap: 3rem; /* Espaciar más los elementos */
+    display: flex;
+    justify-content: space-between; /* Distribuir los elementos */
+    align-items: center;
+    margin: 0 auto; /* Centrar el contenedor */
+  }
+
+  .logo-image {
+    width: 180px; /* Aumentar tamaño del logo */
+  }
+
+  .navbar ul {
+    gap: 4rem; /* Separar más los elementos del menú */
+  }
+
+  .navbar li {
+    font-size: 1.4rem; /* Aumentar tamaño del texto del menú */
+  }
+
+  .cta-but {
+    padding: 1rem 2rem; /* Aumentar tamaño del botón */
+    font-size: 1.2rem; /* Hacer el texto más grande */
+    margin-right: 0; /* Quitar margen derecho innecesario */
   }
 }
 
