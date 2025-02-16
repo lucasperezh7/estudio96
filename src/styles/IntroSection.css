@@ -48,7 +48,7 @@
 @media (max-width: 320px) {
   .intro-section {
     height: 50vh; /* Reduce la altura para pantallas más pequeñas */
-    padding-top: 100px; /* Ajusta el padding para que no haya mucho espacio vacío */
+    padding-top: 200px; /* Ajusta el padding para que no haya mucho espacio vacío */
   }
 
   .content-container {

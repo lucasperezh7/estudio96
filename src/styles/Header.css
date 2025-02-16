@@ -125,6 +125,7 @@
 }
 
 @media (max-width: 320px) {
+  /* Estilos generales para el header */
   .header {
     position: fixed;
     top: 0;
@@ -165,7 +166,7 @@
     justify-content: center;
     cursor: pointer;
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
-   margin-bottom: -20px;
+    margin-bottom: -20px;
   }
 
   .logo-image {
@@ -178,13 +179,15 @@
     opacity: 0.9;
     transform: scale(0.9); /* Suaviza la reducción */
   }
+
+  /* Esconder barra de navegación */
   .navbar {
     display: flex;
     align-items: center;
     margin-left: 0px;
     display: none;
   }
-  
+
   .navbar ul {
     list-style: none;
     display: flex;
@@ -192,10 +195,24 @@
     padding: 0;
     gap: 1px; /* Espacio entre los enlaces */
   }
-.cta-but {
-  display: none;
+
+  .cta-but {
+    display: none;
+  }
+
+  /* Estilos para el video de fondo */
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra toda el área */
+    pointer-events: none; /* Deshabilita la interacción con el video */
+    z-index: -1; /* Coloca el video detrás de otros elementos */
+  }
 }
-}
+
 
 @media (max-width: 480px) {
   .header {
