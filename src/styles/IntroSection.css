@@ -45,3 +45,154 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra ligera para el subtítulo */
 }
 
+@media (max-width: 320px) {
+  .intro-section {
+    height: 50vh; /* Reduce la altura para pantallas más pequeñas */
+    padding-top: 100px; /* Ajusta el padding para que no haya mucho espacio vacío */
+  }
+
+  .content-container {
+    width: 90%; /* Asegura que el contenido no se desborde */
+    top: 55%; /* Ajusta la posición para mejor alineación */
+  }
+
+  .title {
+    font-size: 2rem; /* Reduce el tamaño del título */
+    letter-spacing: 1px; /* Reduce el espaciado de las letras */
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem; /* Reduce el tamaño del subtítulo */
+    margin-top: 0.3rem;
+  }
+
+  .background-video {
+    object-fit: cover; /* Asegura que el video se ajuste bien */
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-section {
+    height: 60vh; /* Ajuste moderado en altura */
+    padding-top: 120px; /* Espaciado superior ajustado */
+  }
+
+  .content-container {
+    width: 85%; /* Ligera reducción de ancho */
+    top: 50%; /* Centrado más preciso */
+  }
+
+  .title {
+    font-size: 2.5rem; /* Tamaño intermedio entre S y L */
+    letter-spacing: 1.2px; 
+    margin-bottom: 0.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.4rem;
+  }
+
+  .background-video {
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    height: 60vh;             /* Ajusta la altura para pantallas medianas */
+    padding-top: 150px;       /* Ajusta el padding para que no haya tanto espacio vacío */
+  }
+
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  /* Contenedor del contenido centrado */
+  .content-container {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    z-index: 1;
+  }
+
+  /* Estilo para el título */
+  .title {
+    font-size: 3rem;           /* Ajuste del tamaño del título */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;      /* Espaciado de letras reducido */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Estilo para el subtítulo */
+  .subtitle {
+    font-size: 1.2rem;         /* Ajuste del tamaño del subtítulo */
+    font-weight: lighter;
+    margin-top: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .intro-section {
+    position: relative;  /* Necesario para el posicionamiento absoluto del contenido centrado */
+    width: 100%;         /* Asegura que ocupe todo el ancho de la pantalla */
+    height: 60vh;        /* Ajusta la altura para pantallas medianas */
+    overflow: hidden; 
+    padding-top: 150px;  /* Ajusta el padding superior */
+  }
+
+  .background-video {
+    position: absolute;    /* Coloca el video de forma absoluta dentro de .intro-section */
+    top: 0;                /* Coloca el video en la parte superior */
+    left: 0;               /* Coloca el video en la parte izquierda */
+    width: 100%;           /* Hace que el video ocupe todo el ancho disponible */
+    height: 100%;          /* Hace que el video ocupe toda la altura disponible */
+    object-fit: cover;     /* Hace que el video cubra completamente el contenedor sin distorsionarse */
+    z-index: 0;           
+  }
+
+  /* Contenedor del contenido centrado */
+  .content-container {
+    position: absolute;        /* Coloca el contenido de forma absoluta dentro de .intro-section */
+    top: 50%;                   /* Coloca el contenido en el centro vertical de la sección */
+    left: 50%;                  /* Coloca el contenido en el centro horizontal de la sección */
+    transform: translate(-50%, -50%); /* Ajusta para centrarlo perfectamente */
+    text-align: center;         /* Centra el texto dentro del contenedor */
+    color: #ffffff;             /* Asegura que el texto sea blanco y visible sobre el video */
+    z-index: 1;                 /* Asegura que el contenido esté encima del video */
+  }
+
+  /* Estilo para el título */
+  .title {
+    font-size: 3rem;            /* Ajusta el tamaño del título */
+    font-weight: bold;          /* Fuente en negrita para mayor énfasis */
+    margin-bottom: 1rem;        /* Espacio debajo del título */
+    text-transform: uppercase;  /* Convertir el texto a mayúsculas */
+    letter-spacing: 1.5px;      /* Reduce el espaciado de letras */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra sutil */
+  }
+
+  /* Estilo para el subtítulo */
+  .subtitle {
+    font-size: 1.2rem;          /* Ajusta el tamaño del subtítulo */
+    font-weight: lighter;       /* Fuente más ligera para el subtítulo */
+    margin-top: 0.5rem;         /* Espacio encima del subtítulo */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra ligera */
+  }
+}
+
+

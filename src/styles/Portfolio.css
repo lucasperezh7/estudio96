@@ -6,8 +6,8 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding:  20px;
-  padding-top: 120px;
+  padding:  0px;
+  padding-top: 80px;
   text-align: center;
 }
 
@@ -23,7 +23,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background-color: #f39c12;
+  background-color: #88bcf0;
   margin: 10px auto 0;
   border-radius: 2px;
   
@@ -142,3 +142,233 @@
 .portfolio-carrusel-image.right.exiting {
   transform: translateX(-100%); /* Se mueve hacia la izquierda */
 }
+
+@media (max-width: 320px) {
+  .portfolio-carrusel {
+    padding-top: 80px; /* Reduce el espacio superior */
+    padding: 10px; /* Menos padding lateral */
+  }
+
+  .portfolio-carrusel-title {
+    padding-top: 30px;
+    font-size: 1.5rem; /* Reduce el tamaño del título */
+    margin-bottom: 20px;
+  }
+
+  .portfolio-carrusel-title::after {
+    width: 50px; /* Reduce la línea decorativa */
+    height: 3px;
+  }
+
+  .portfolio-carrusel-container {
+    height: 250px; /* Reduce la altura del carrusel */
+  }
+
+  .portfolio-carrusel-image {
+    width: 80%; /* Hace que las imágenes sean más pequeñas */
+    height: auto;
+  }
+
+  .main-image {
+    width: 70%; /* Imagen principal más pequeña */
+  }
+
+  .left,
+  .right {
+    width: 50%; /* Reduce el tamaño de las imágenes laterales */
+    opacity: 0.5; /* Mayor diferencia con la imagen central */
+  }
+
+  .portfolio-carrusel-image.left.entering,
+  .portfolio-carrusel-image.right.entering {
+    transform: scale(0.9); /* Evita que se agranden demasiado al entrar */
+  }
+
+  .portfolio-carrusel-image.left.exiting,
+  .portfolio-carrusel-image.right.exiting {
+    transform: scale(0.7); /* Reduce más al salir */
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-carrusel {
+    padding-top: 100px; /* Ajuste de espacio superior */
+    padding: 15px; /* Menos padding lateral */
+  }
+
+  .portfolio-carrusel-title {
+    padding-top: 20px;
+    font-size: 1.7rem; /* Tamaño de título reducido */
+    margin-bottom: 20px;
+  }
+
+  .portfolio-carrusel-title::after {
+    width: 60px; /* Ajuste de la línea decorativa */
+    height: 4px;
+  }
+
+  .portfolio-carrusel-container {
+    height: 350px; /* Ajuste de altura para pantallas medianas */
+  }
+
+  .portfolio-carrusel-image {
+    width: 90%; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+  }
+
+  .main-image {
+    width: 80%; /* Imagen principal un poco más pequeña */
+  }
+
+  .left,
+  .right {
+    width: 55%; /* Reduce el tamaño de las imágenes laterales */
+    opacity: 0.6; /* Diferencia sutil con la imagen central */
+  }
+
+  .portfolio-carrusel-image.left.entering,
+  .portfolio-carrusel-image.right.entering {
+    transform: scale(0.95); /* Ajusta la escala al entrar */
+  }
+
+  .portfolio-carrusel-image.left.exiting,
+  .portfolio-carrusel-image.right.exiting {
+    transform: scale(0.8); /* Ajusta la escala al salir */
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .portfolio-carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* El ancho se ajusta completamente */
+    margin: 0 auto;
+    padding: 0px;
+    padding-top: 60px; /* Menor espacio superior */
+    text-align: center;
+  }
+
+  .portfolio-carrusel-title {
+    font-size: 1.8rem; /* Reducción del tamaño del título */
+    font-weight: bold;
+    margin-bottom: 20px; /* Reducción del margen inferior */
+    color: #333;
+  }
+
+  .portfolio-carrusel-title::after {
+    content: "";
+    display: block;
+    width: 60px; /* Reducción del tamaño de la línea decorativa */
+    height: 3px;
+    background-color: #88bcf0;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+
+  .portfolio-carrusel-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portfolio-carrusel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 400px; /* Ajuste del tamaño del contenedor */
+    transition: transform 1s ease-in-out;
+    margin-top: -16px;
+  }
+
+  /* Estilo común para las imágenes */
+  .portfolio-carrusel-image {
+    position: absolute;
+    height: auto;
+    object-fit: cover;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+
+  /* Imagen principal */
+  .main-image {
+    z-index: 3;
+    width: 60%; /* La imagen principal es un poco más grande */
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+
+  /* Imagen anterior */
+  .left {
+    left: 0%;
+    opacity: 0.6;
+    width: 40%; /* Ajuste del tamaño de la imagen lateral */
+    transform: scale(0.8);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+
+  /* Imagen siguiente */
+  .right {
+    right: 0%;
+    opacity: 0.6;
+    width: 40%; /* Ajuste del tamaño de la imagen lateral */
+    transform: scale(0.8);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+
+  /* Animación para la imagen anterior */
+  .portfolio-carrusel-image.left.entering {
+    left: 10%;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Animación para la imagen siguiente */
+  .portfolio-carrusel-image.right.entering {
+    right: 10%;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Animación de salida para la imagen anterior */
+  .portfolio-carrusel-image.left.exiting {
+    left: 100%;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  /* Animación de salida para la imagen siguiente */
+  .portfolio-carrusel-image.right.exiting {
+    right: 100%;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  /* Desplazamiento de la imagen principal */
+  .portfolio-carrusel-wrapper.move-right {
+    transform: translateX(-100%);
+  }
+
+  .portfolio-carrusel-image {
+    position: absolute;
+    transition: transform 1s ease, opacity 1s ease;
+  }
+
+  /* Animación de deslizamiento para las imágenes */
+  .portfolio-carrusel-image.left.entering {
+    transform: translateX(0);
+  }
+
+  .portfolio-carrusel-image.right.entering {
+    transform: translateX(0);
+  }
+
+  .portfolio-carrusel-image.left.exiting {
+    transform: translateX(100%);
+  }
+
+  .portfolio-carrusel-image.right.exiting {
+    transform: translateX(-100%);
+  }
+}
+

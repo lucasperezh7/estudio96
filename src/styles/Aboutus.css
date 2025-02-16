@@ -25,7 +25,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background-color: #f39c12;
+  background-color: #88bcf0;
   margin: 10px auto 0;
   border-radius: 2px;
 }
@@ -102,27 +102,7 @@ h2 {
 }
 
 /* Responsividad */
-@media (max-width: 768px) {
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .about-image {
-    width: 80%;
-  }
-
-  .h2p {
-    width: 90%;
-    text-align: center;
-    align-items: center;
-  }
-
-  .image-container {
-    width: 100%;
-    justify-content: center;
-  }
-}
 
 @media (max-width: 320px) {
   .about-us {
@@ -180,3 +160,274 @@ h2 {
     text-align: center;
   }
 }
+
+@media (max-width: 480px) {
+  .about-us {
+    padding: 60px 15px; /* Ligero aumento del padding */
+    gap: 35px; /* Ajuste del espacio entre elementos */
+  }
+
+  .about-title {
+    font-size: 26px; /* Tamaño intermedio */
+    letter-spacing: 1.2px;
+  }
+
+  .about-title::after {
+    width: 70px; /* Línea decorativa un poco más ancha */
+    height: 3px;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .left-image,
+  .right-image,
+  .text-left,
+  .right-text {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .h2p {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .about-image {
+    width: 95%; /* Más ancho para aprovechar el espacio */
+    max-width: 280px;
+  }
+
+  .image-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .about-text {
+    font-size: 17px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 480px) {
+  .about-us {
+    display: flex;
+    flex-direction: column; /* Mantiene la disposición en columna */
+    align-items: center;
+    gap: 40px; /* Reduce el espacio entre los elementos */
+    padding: 0 20px;
+    padding-top: 100px; /* Ajusta el padding superior para evitar mucho espacio */
+  }
+
+  /* Estilos para el título principal */
+  .about-title {
+    font-size: 26px; /* Ajusta el tamaño del título para que sea legible en pantallas medianas */
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Reduce el espaciado de letras */
+  }
+
+  /* Línea decorativa debajo del título */
+  .about-title::after {
+    content: "";
+    display: block;
+    width: 70px; /* Aumenta ligeramente el tamaño de la línea decorativa */
+    height: 3px;
+    background-color: #88bcf0;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: column; /* Cambia la disposición a columna */
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    gap: 30px; /* Aumenta el espacio entre los elementos */
+  }
+
+  .left-image, .right-image {
+    padding: 0; /* Elimina el padding lateral */
+    width: 100%; /* Aprovecha el 100% del ancho */
+    text-align: center; /* Centra las imágenes */
+  }
+
+  /* Contenedor para h2 y p */
+  .h2p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; /* Aprovecha el ancho completo */
+    text-align: center; /* Centra el texto */
+  }
+
+  .right-text {
+    padding-right: 0; /* Elimina padding a la derecha */
+    text-align: center; /* Centra el texto */
+  }
+
+  .text-left {
+    padding-left: 0; /* Elimina padding a la izquierda */
+    width: 100%; /* Aprovecha el ancho completo */
+    text-align: center; /* Centra el texto */
+  }
+
+  /* Contenedor para alinear la imagen a la derecha */
+  .image-container {
+    display: flex;
+    justify-content: center; /* Centra la imagen */
+    width: 100%; /* Aprovecha el ancho completo */
+  }
+
+  h2 {
+    font-size: 22px; /* Ajusta el tamaño de la fuente */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .about-text {
+    font-size: 17px; /* Ajusta el tamaño del texto */
+    text-align: justify;
+    line-height: 1.6;
+  }
+
+  .about-image {
+    width: 100%; /* Ajusta el ancho de la imagen */
+    max-width: 320px; /* Limita el tamaño de la imagen */
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .about-us {
+    display: flex;
+    flex-direction: column; /* Mantiene la disposición en columna */
+    align-items: center;
+    gap: 30px; /* Reduce el espacio entre los elementos */
+    padding: 0 80px;
+    padding-top: 100px; /* Ajusta el padding superior */
+  }
+
+  /* Estilos para el título principal */
+  .about-title {
+    font-size: 24px; /* Ajusta el tamaño del título */
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Reduce el espaciado de letras */
+    position: relative;
+  }
+
+  /* Línea decorativa debajo del título */
+  .about-title::after {
+    content: "";
+    display: block;
+    width: 60px; /* Reduce el tamaño de la línea decorativa */
+    height: 3px;
+    background-color: #88bcf0;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: column; /* Cambia la disposición a columna */
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    gap: 90px; /* Reduce el espacio entre los elementos */
+  }
+
+  /* Imagen de la izquierda */
+  .left-image {
+    flex-direction: row;
+    padding-left: 0; /* Elimina el padding izquierdo */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+    text-align: center;
+  }
+
+  /* Imagen de la derecha */
+  .right-image {
+    flex-direction: row;
+    justify-content: center;
+    padding-right: 0; /* Elimina el padding derecho */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+    text-align: center;
+    margin-bottom: 30px; /* Añade margen para separar la imagen del texto */
+  }
+
+  /* Contenedor para h2 y p */
+  .h2p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; /* Aprovecha el ancho completo */
+    text-align: center; /* Centra el texto */
+  }
+
+  .right-text {
+    padding-right: 0; /* Elimina el padding a la derecha */
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Añade margen superior al texto para separarlo más de la imagen */
+  }
+
+  .text-left {
+    align-items: flex-start;
+    padding-left: 0; /* Elimina el padding a la izquierda */
+    width: 100%; /* Aprovecha el ancho completo */
+    text-align: center; /* Centra el texto */
+  }
+
+  /* Contenedor para alinear la imagen a la derecha */
+  .image-container {
+    display: flex;
+    justify-content: center; /* Centra la imagen */
+    width: 100%; /* Aprovecha el ancho completo */
+  }
+
+  h2 {
+    font-size: 20px; /* Ajusta el tamaño del título */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .about-text {
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    text-align: justify;
+    line-height: 1.6;
+  }
+
+  .about-image {
+    width: 100%; /* Ajusta el ancho de la imagen */
+    max-width: 300px; /* Limita el tamaño de la imagen */
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+
+

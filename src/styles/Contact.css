@@ -5,9 +5,9 @@
   justify-content: center;
   align-items: center;
   background-color: #f4f4f9;
-  height: 100vh;
-  padding: 20px;
-  padding-top: 50px;
+  padding: 0px;
+  padding-top: 0px;
+  padding-bottom: 80px ;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -26,7 +26,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background-color: #f39c12;
+  background-color: #88bcf0;
   margin: 10px auto 0;
   border-radius: 2px;
 }
@@ -91,21 +91,175 @@
 }
 
 /* Responsividad */
-@media (max-width: 768px) {
+
+@media (max-width: 320px) {
+  .contacto {
+    height: auto; /* Permite que la altura se ajuste al contenido */
+    padding-top: 30px; /* Reduce el espacio superior */
+    padding: 10px; /* Reduce el padding lateral */
+    padding-bottom: 68px;
+  }
+
+  .contacto-title {
+    font-size: 1.4rem; /* Reduce el tamaño del título */
+    margin-bottom: 20px;
+  }
+
+  .contacto-title::after {
+    width: 50px; /* Reduce la línea decorativa */
+    height: 3px;
+  }
+
   .info-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 10px; /* Menos espacio entre elementos */
+    width: 100%; /* Ocupa todo el ancho disponible */
   }
 
   .contact-info {
-    padding: 15px;
-  }
-
-  .contact-title {
-    font-size: 1.2rem;
+    padding: 10px; /* Reduce el padding de cada bloque */
+    border-radius: 8px; /* Suaviza los bordes */
   }
 
   .contact-detail {
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Reduce el tamaño del texto */
+  }
+
+  .contact-info svg {
+    width: 30px; /* Ajusta el tamaño de los iconos */
+    height: 30px;
   }
 }
+
+@media (max-width: 768px) {
+  .contacto {
+    height: auto; /* Permite que la altura se ajuste al contenido */
+    padding-top: 30px; /* Reduce el espacio superior */
+    padding: 20px; /* Ajusta el padding lateral */
+    padding-bottom: 68px;
+  }
+
+  .contacto-title {
+    font-size: 1.6rem; /* Reduce el tamaño del título */
+    margin-bottom: 20px;
+  }
+
+  .contacto-title::after {
+    width: 60px; /* Ajusta la línea decorativa */
+    height: 3px;
+  }
+
+  .info-container {
+    grid-template-columns: 1fr; /* Disposición en columna, una tarjeta debajo de otra */
+    gap: 20px; /* Espacio más amplio entre los elementos */
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  .contact-info {
+    padding: 15px; /* Ajusta el padding de cada bloque */
+    border-radius: 10px; /* Suaviza los bordes */
+  }
+
+  .contact-detail {
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+  }
+
+  .contact-info svg {
+    width: 35px; /* Ajusta el tamaño de los iconos */
+    height: 35px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+    padding: 0px;
+    padding-top: 30px; /* Menor padding superior */
+    padding-bottom: 60px; /* Menor padding inferior */
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  /* Título de la sección Contacto */
+  .contacto-title {
+    font-size: 1.6rem; /* Reducción del tamaño del título */
+    font-weight: bold;
+    margin-bottom: 20px; /* Menor margen inferior */
+    color: #222;
+    text-align: center;
+  }
+
+  .contacto-title::after {
+    content: "";
+    display: block;
+    width: 60px; /* Ajuste de la línea decorativa */
+    height: 3px;
+    background-color: #88bcf0;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+
+  /* Contenedor de la cuadrícula */
+  .info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    gap: 20px; /* Aumento de espacio entre los bloques */
+    width: 90%;
+    max-width: 1000px; /* Ajuste en el ancho máximo */
+    height: auto; /* Ajuste de altura automática */
+    overflow: hidden;
+  }
+
+  /* Estilo común para cada bloque de información */
+  .contact-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+
+  /* Efecto al hacer hover */
+  .contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Títulos (iconos) de cada bloque */
+  .contact-info svg {
+    margin-bottom: 10px;
+  }
+
+  /* Detalles de contacto */
+  .contact-detail {
+    font-size: 0.9rem; /* Reducción del tamaño de fuente */
+    color: #555;
+    margin-top: 10px;
+  }
+
+  /* Números de teléfono */
+  .contact-detail p {
+    margin: 5px 0;
+  }
+
+  .contact-detail a {
+    color: #3498db;
+    text-decoration: none;
+  }
+
+  .contact-detail a:hover {
+    text-decoration: underline;
+  }
+}
+
+

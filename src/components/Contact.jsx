@@ -16,7 +16,7 @@ const Contacto = () => {
       <div className="info-container">
         {/* Teléfonos */}
         <div className="contact-info">
-          <FaPhone size={50} color="#f39c12" />
+          <FaPhone size={50} color="#0d457d" />
           <div className="contact-detail">
             <p>603 01 68 29</p>
             <p>687 76 94 21</p>
@@ -25,13 +25,13 @@ const Contacto = () => {
 
         {/* Correo Electrónico */}
         <div className="contact-info">
-          <FaEnvelope size={50} color="#f39c12" />
+          <FaEnvelope size={50} color="#0d457d" />
           <p className="contact-detail">contacto@estudionoventayseis.com</p>
         </div>
 
         {/* Instagram */}
         <div className="contact-info">
-          <FaInstagram size={50} color="#f39c12" />
+          <FaInstagram size={50} color="#0d457d" />
           <p className="contact-detail">
             <a
               href="https://instagram.com/"
@@ -45,7 +45,7 @@ const Contacto = () => {
 
         {/* Localización */}
         <div className="contact-info">
-          <FaMapMarkerAlt size={50} color="#f39c12" />
+          <FaMapMarkerAlt size={50} color="#0d457d" />
           <p className="contact-detail">Alicante / España / Global</p>
         </div>
       </div>

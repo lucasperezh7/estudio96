@@ -144,7 +144,7 @@
     align-items: center;
     flex-direction: column;
     gap: 0px;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     padding-top: 0px;
     padding-bottom: 8px;
     transition: padding 1.8s ease-in-out; /* Suaviza los cambios de padding */
@@ -196,6 +196,293 @@
   display: none;
 }
 }
+
+@media (max-width: 480px) {
+  .header {
+    height: 90px; /* Ajuste intermedio entre grandes y pequeños */
+    padding: 18px 0; /* Espaciado moderado */
+  }
+
+  .header-container {
+    flex-direction: column;
+    gap: 5px; /* Más separación entre elementos */
+    padding-bottom: 10px;
+  }
+
+  .header.sticky {
+    height: 75px; /* Reducción progresiva */
+    padding: 3px 0;
+    padding-top: 16px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  }
+
+  /* LOGO */
+  .logo-image {
+    width: 130px; /* Tamaño ligeramente mayor para pantallas M */
+  }
+
+  .header.sticky .logo-image {
+    width: 140px; /* Pequeña reducción al hacer scroll */
+    transform: scale(0.85);
+  }
+
+  /* NAVBAR */
+  .navbar {
+    display: none; /* Sigue oculto para móviles medianos */
+  }
+
+  /* Call to Action Button */
+  .cta-but {
+    display: none; /* Oculto en esta vista */
+  }
+}
+
+
+@media (max-width: 768px) and (min-width: 480px) {
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Fondo transparente */
+    z-index: 1000;
+    transition: background-color 1.0s ease, padding 1.8s ease;
+    padding: 16px 0; /* Espaciado más pequeño */
+    height: 80px; /* Ajuste de altura para pantallas medianas */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header.sticky {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 18px 0;
+    height: 70px; /* Altura más pequeña en sticky */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 1.9s ease, padding 2.6s ease, height 1.6s ease;
+  }
+
+  /* CONTENEDOR DEL HEADER */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%; /* Utiliza el 100% del ancho */
+    width: 100%;
+    padding: 0 1rem; /* Ajusta el padding */
+    gap: 1rem; /* Reduce el espacio entre el logo y el menú */
+  }
+
+  /* LOGO */
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .logo-image {
+    width: 90px; /* Tamaño del logo más pequeño */
+    transition: width 0.6s ease, opacity 0.6s ease;
+    cursor: pointer;
+    margin-left: -10px; /* Ajuste de margen */
+  }
+
+  .header.sticky .logo-image {
+    width: 80px; /* Reducción del tamaño */
+    opacity: 0.85;
+    margin-right: 10px; /* Ajuste de margen */
+  }
+
+  /* MENÚ DE NAVEGACIÓN */
+  .navbar {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 15px; /* Ajuste de margen */
+  }
+
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 1rem; /* Ajuste el espacio entre enlaces */
+  }
+
+  .navbar li {
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+    position: relative;
+    cursor: pointer;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: opacity 0.6s ease;
+  }
+
+  .header.sticky .navbar a {
+    opacity: 0.8;
+  }
+
+  .navbar li::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #666;
+    transition: width 0.6s ease, left 0.6s ease;
+  }
+
+  .navbar li:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  /* BOTÓN DE CONTACTO */
+  .cta-but {
+    display: inline-block;
+    padding: 0.4rem 0.8rem; /* Ajusta el tamaño del botón */
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-right: 20px; /* Ajusta el margen */
+  }
+
+  .cta-but:hover {
+    background-color: #222;
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Fondo transparente */
+    z-index: 1000;
+    transition: background-color 1.0s ease, padding 1.8s ease; /* Transición más lenta */
+    padding: 18px 0; /* Espaciado más pequeño */
+    height: 100px; /* Ajuste de altura para pantallas medianas */
+    display: flex;
+    justify-content: space-between; /* Disposición en fila */
+    align-items: center; /* Centrado en el eje Y */
+  }
+
+  .header.sticky {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo suave */
+    padding: 12px 0; /* Reducir padding */
+    height: 80px; /* Altura más pequeña */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 1.9s ease, padding 2.6s ease, height 1.6s ease;
+  }
+
+  /* CONTENEDOR DEL HEADER */
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* Mantener los elementos distribuidos */
+    align-items: center; /* Centrado en el eje Y */
+    max-width: 100%; /* Aprovecha el ancho completo */
+    width: 100%;
+    padding: 0 1.5rem; /* Ajuste del padding */
+    gap: 1.5rem; /* Espacio entre el logo y el menú */
+  }
+
+  /* LOGO */
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .logo-image {
+    width: 110px; /* Tamaño del logo ajustado */
+    transition: width 0.6s ease, opacity 0.6s ease;
+    cursor: pointer;
+  }
+
+  .header.sticky .logo-image {
+    width: 95px; /* Reducción del tamaño */
+    opacity: 0.85;
+  }
+
+  /* MENÚ DE NAVEGACIÓN */
+  .navbar {
+    display: flex;
+    align-items: center;
+    margin-left: 30px; /* Ajuste de margen */
+  }
+
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 2rem; /* Espacio entre los enlaces */
+  }
+
+  .navbar li {
+    font-size: 1rem; /* Tamaño de fuente ajustado */
+    position: relative;
+    cursor: pointer;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: opacity 0.6s ease;
+  }
+
+  .header.sticky .navbar a {
+    opacity: 0.8;
+  }
+
+  .navbar li::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #666;
+    transition: width 0.6s ease, left 0.6s ease;
+  }
+
+  .navbar li:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  /* BOTÓN DE CONTACTO */
+  .cta-but {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-right: 30px; /* Ajuste de margen */
+  }
+
+  .cta-but:hover {
+    background-color: #222;
+    transform: translateY(-2px);
+  }
+}
+
 
   /* HEADER */
 

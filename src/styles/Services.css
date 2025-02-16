@@ -16,7 +16,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background-color: #f39c12;
+  background-color: #88bcf0;
   margin: 10px auto 0;
   border-radius: 2px;
   
@@ -83,17 +83,172 @@
 }
 
 /* Responsividad */
-@media (max-width: 768px) {
-  .portfolio-1column {
-    display: block; /* Una columna para dispositivos móviles */
+@media (max-width: 320px) {
+  .portfolio {
+    padding-top: 80px; /* Reduce el espacio superior */
+    padding: 0 10px; /* Menos padding lateral */
+  }
+
+  .portfolio-title {
+    font-size: 24px; /* Reduce el tamaño del título */
+    margin-bottom: 30px;
+  }
+
+  .portfolio-title::after {
+    width: 60px; /* Reduce la línea decorativa */
+    height: 3px;
+  }
+
+  .portfolio-1column,
+  .portfolio-2column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio más reducido entre los elementos */
+    align-items: center; /* Centra los elementos */
   }
 
   .portfolio-item {
-    flex: 1 1 100%; /* Las imágenes ocupan todo el ancho disponible en pantallas pequeñas */
-    margin: 10px 0; /* Espaciado entre las imágenes */
+    width: 100%; /* Cada elemento ocupa todo el ancho */
+    flex: none; /* Evita que se redimensionen */
+    margin: 10px 0; /* Espaciado entre elementos */
   }
 
   .portfolio-image {
-    height: 150px; /* Ajustamos la altura de las imágenes para pantallas pequeñas */
+    height: 120px; /* Reduce la altura de las imágenes */
+  }
+
+  .portfolio-name {
+    font-size: 18px;
+  }
+
+  .portfolio-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio {
+    padding-top: 100px; /* Un poco más de espacio en la parte superior */
+    padding: 0 15px; /* Ligeramente más padding lateral */
+  }
+
+  .portfolio-title {
+    font-size: 26px; /* Tamaño de título ligeramente mayor */
+    margin-bottom: 35px;
+  }
+
+  .portfolio-title::after {
+    width: 70px; /* Línea decorativa un poco más ancha */
+    height: 4px;
+  }
+
+  .portfolio-1column,
+  .portfolio-2column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio más amplio entre los elementos */
+    align-items: center; /* Centra los elementos */
+  }
+
+  .portfolio-item {
+    width: 100%; /* Cada elemento ocupa todo el ancho disponible */
+    flex: none; /* Evita que se redimensionen */
+    margin: 15px 0; /* Un poco más de espaciado entre los elementos */
+  }
+
+  .portfolio-image {
+    height: 150px; /* Ajusta la altura de las imágenes */
+  }
+
+  .portfolio-name {
+    font-size: 20px; /* Aumenta el tamaño del nombre */
+  }
+
+  .portfolio-description {
+    font-size: 16px; /* Un poco mayor el tamaño de la descripción */
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .portfolio {
+    text-align: center;
+    padding: 0px 20px;
+    padding-top: 100px; /* Ajuste de padding-top para menor espacio */
+  }
+
+  .portfolio-title {
+    font-size: 24px; /* Tamaño de fuente ajustado */
+    font-weight: bold;
+    margin-bottom: 30px; /* Espacio debajo del título reducido */
+    color: #222;
+  }
+
+  .portfolio-title::after {
+    content: "";
+    display: block;
+    width: 60px; /* Ancho reducido de la línea decorativa */
+    height: 3px; /* Alto reducido de la línea decorativa */
+    background-color: #88bcf0;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Ajustar el grid para que tenga solo 2 columnas en pantallas medianas */
+  .portfolio-1column {
+    display: flex;
+    gap: 20px; /* Menor espacio entre elementos */
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .portfolio-item {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    flex: 1 1 calc(50% - 20px); /* Ajuste a 2 columnas */
+    margin-bottom: 20px;
+  }
+
+  .portfolio-item:hover {
+    transform: scale(1.05);
+  }
+
+  .portfolio-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .portfolio-info {
+    padding: 15px;
+  }
+
+  .portfolio-name {
+    font-size: 18px; /* Tamaño de fuente reducido */
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .portfolio-description {
+    font-size: 14px; /* Tamaño de fuente reducido */
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* Asegura que las 2 últimas imágenes se centren en la segunda fila */
+  .portfolio-2column {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 }
